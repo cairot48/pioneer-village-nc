@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:pioneervillagenc.com)",
+      "WebFetch(domain:www.yelp.com)",
+      "WebFetch(domain:www.tripadvisor.com)",
+      "Bash(find /Users/cairo/Downloads -name \"*.html\" -maxdepth 3 2>/dev/null | head -20)",
+      "Read(//Users/cairo/Downloads/**)"
+    ]
+  }
+}
