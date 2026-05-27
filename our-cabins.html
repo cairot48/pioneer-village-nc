@@ -17,6 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-9MSBNZR5S1');
     gtag('config', 'AW-533649878');
+    gtag('config', 'AW-18100347740');
   </script>
   <!-- Meta Pixel -->
   <script>
@@ -650,7 +651,7 @@
     document.querySelectorAll('a[href*="vrbo.com"], a[href*="airbnb.com"]').forEach(function(el) {
       el.addEventListener('click', function() {
         if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
-        if (typeof gtag === 'function') gtag('event', 'begin_checkout');
+        if (typeof gtag === 'function') gtag('event', 'conversion', {'send_to': 'AW-18100347740/d_Q2CKPVgbQcENzG9bZD'});
       });
     });
   </script>
