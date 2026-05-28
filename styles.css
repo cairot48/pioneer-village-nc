@@ -2,7 +2,7 @@
    Pioneer Village — Shared Stylesheet
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Inter:wght@700&family=DM+Sans:wght@700&display=swap');
 
 /* ---- Variables ---- */
 :root {
@@ -695,19 +695,29 @@ h1, h2, h3, h4 {
 
 .cabin-features {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
   margin-bottom: 20px;
 }
 
 .cabin-features li {
   font-size: 12px;
-  background: var(--cream);
   color: var(--text-mid);
-  padding: 4px 10px;
-  border-radius: 2px;
-  border: 1px solid var(--stone);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.cabin-features li::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 11px;
+  flex-shrink: 0;
 }
 
 .cabin-card-renovation {
@@ -1313,12 +1323,10 @@ h1, h2, h3, h4 {
 
 /* ---- About Page ---- */
 .about-page-section {
-  padding: 100px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 100px 6%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -1556,29 +1564,29 @@ h1, h2, h3, h4 {
 }
 .btn-vrbo {
   display: inline-block;
-  background: #3D6ECC;
+  background: #1A56DB;
   color: #fff;
-  border: 2px solid #3D6ECC;
+  border: 2px solid #1A56DB;
   border-radius: 4px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', 'Lato', sans-serif;
   font-weight: 700;
   font-size: 13px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   padding: 12px 16px;
   transition: background 0.2s, border-color 0.2s;
   cursor: pointer;
 }
-.btn-vrbo:hover { background: #2d5ab8; border-color: #2d5ab8; color: #fff; }
+.btn-vrbo:hover { background: #1445b8; border-color: #1445b8; color: #fff; }
 .btn-airbnb {
   display: inline-block;
   background: #FF5A5F;
   color: #fff;
   border: 2px solid #FF5A5F;
   border-radius: 4px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'DM Sans', 'Lato', sans-serif;
   font-weight: 700;
   font-size: 13px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   padding: 12px 16px;
   transition: background 0.2s, border-color 0.2s;
   cursor: pointer;

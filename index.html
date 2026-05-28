@@ -178,6 +178,42 @@
         font-size: 20px;
       }
     }
+
+    /* ---- Gallery Carousel ---- */
+    .gallery-carousel-outer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .gallery-carousel-track {
+      display: flex;
+      gap: 12px;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+    .gallery-carousel-slide {
+      flex: 0 0 calc((100% - 24px) / 3);
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      height: 280px;
+    }
+    .gallery-carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .gallery-carousel-slide:hover img { transform: scale(1.04); }
+    @media (max-width: 768px) {
+      .gallery-carousel-slide {
+        flex: 0 0 100%;
+        height: 220px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -197,7 +233,7 @@
       <li><a href="whats-local.html">What's Local</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li>
-        <a href="our-cabins.html" class="nav-book-btn">Book Now</a>
+        <a href="our-cabins.html#cabin-grid" class="nav-book-btn">Book Now</a>
       </li>
     </ul>
   </nav>
@@ -211,7 +247,7 @@
       <h1>Where the Mountains<br><em>Meet the Creek</em></h1>
       <p class="hero-sub">Rustic cabins, stone fireplaces, and the sound of Campbell Creek outside your door. Your Smoky Mountain escape is waiting.</p>
       <div class="btn-group" style="justify-content:center;">
-        <a href="our-cabins.html" class="btn btn-gold">Book a Cabin</a>
+        <a href="our-cabins.html#cabin-grid" class="btn btn-gold">Book a Cabin</a>
       </div>
       <div class="hero-filters">
         <span class="hero-filter-label">Traveling as:</span>
@@ -373,26 +409,24 @@
         <h2>Every Season Has Its Magic</h2>
         <p>Fall foliage, winter snow, spring wildflowers, summer tubing. Pioneer Village is worth visiting year-round.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item-large">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/PV_20website_20pic.JPG/:/rs=w:740,cg:true,m" alt="Pioneer Village aerial view" loading="lazy" />
+      <div class="gallery-carousel-outer" id="gallery-carousel">
+        <button class="carousel-arrow carousel-prev" aria-label="Previous photos">&#8249;</button>
+        <div class="carousel-track-container">
+          <div class="gallery-carousel-track">
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/PV_20website_20pic.JPG/:/rs=w:600,cg:true,m" alt="Pioneer Village aerial view" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/PV_20in_20the_20fall.JPG/:/rs=w:600,cg:true,m" alt="Pioneer Village in fall" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/20220830_133452.JPG/:/cr=t:13.52%25,l:0%25,w:84.75%25,h:84.75%25/rs=w:600,cg:true,m" alt="Pioneer Village cabins along Campbell Creek" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/IMG_8444.JPG/:/rs=w:600,cg:true,m" alt="Pioneer Village cabin exterior" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/pv_20sign_20snow.JPG/:/rs=w:600,cg:true,m" alt="Pioneer Village sign in snow" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/IMG_8445.JPG/:/rs=w:600,cg:true,m" alt="Cabin 5 at Pioneer Village" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/20220830_133511.JPG/:/rs=w:600,cg:true,m" alt="Pioneer Village cabin in summer" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/pv.jpg/:/rs=w:600,cg:true" alt="Pioneer Village property" loading="lazy" /></div>
+            <div class="gallery-carousel-slide"><img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/IMG_8447.JPG/:/rs=w:600,cg:true,m" alt="Cabin 10 at Pioneer Village" loading="lazy" /></div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/PV_20in_20the_20fall.JPG/:/rs=w:370,cg:true,m" alt="Pioneer Village in fall" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/pv_20sign_20snow.JPG/:/rs=w:370,cg:true,m" alt="Pioneer Village sign in snow" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/IMG_8444.JPG/:/rs=w:370,cg:true,m" alt="Pioneer Village cabin exterior" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/pv.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:370,cg:true" alt="Pioneer Village property" loading="lazy" />
-        </div>
-        <div class="gallery-item">
-          <img src="https://img1.wsimg.com/isteam/ip/b1d85c42-417b-4160-b510-30c57cd1ad48/20220830_133511.JPG/:/rs=w:370,cg:true,m" alt="Pioneer Village cabin in summer" loading="lazy" />
-        </div>
+        <button class="carousel-arrow carousel-next" aria-label="Next photos">&#8250;</button>
       </div>
+      <div class="carousel-dots" id="gallery-dots" style="margin-top:24px;" role="tablist" aria-label="Gallery slides"></div>
     </div>
   </section>
 
@@ -420,20 +454,6 @@
 
             <div class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p class="review-text">"Sipping coffee in the morning in rocking chairs watching ducks in the creek was a perfect start to each day. The cabin was so comfortable and had everything we needed to feel at home."</p>
-              <div class="review-author">Kathleen J.</div>
-              <div class="review-source">VRBO Review</div>
-            </div>
-
-            <div class="review-card">
-              <div class="review-stars">★★★★★</div>
-              <p class="review-text">"This is our third time staying at Pioneer Village. It is a wonderful place to vacation. Ronnie checked in with us to see if we needed anything — super helpful and nice."</p>
-              <div class="review-author">Brooke H.</div>
-              <div class="review-source">VRBO Review</div>
-            </div>
-
-            <div class="review-card">
-              <div class="review-stars">★★★★★</div>
               <p class="review-text">"Absolutely perfect mountain getaway. The fireplace crackled all evening and we could hear the creek right from our porch. Woke up to mountain fog drifting through the trees — it felt like a dream. We'll be back every fall."</p>
               <div class="review-author">Michael T.</div>
               <div class="review-source">Airbnb Review</div>
@@ -448,9 +468,23 @@
 
             <div class="review-card">
               <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Sipping coffee in the morning in rocking chairs watching ducks in the creek was a perfect start to each day. The cabin was so comfortable and had everything we needed to feel at home."</p>
+              <div class="review-author">Kathleen J.</div>
+              <div class="review-source">VRBO Review</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
               <p class="review-text">"Stayed here for a long weekend with my partner and it exceeded every expectation. The cabin was cozy and well-equipped, the stone fireplace was everything we hoped for, and being steps from the creek made it feel completely removed from everyday life."</p>
               <div class="review-author">James R.</div>
               <div class="review-source">Airbnb Review</div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"This is our third time staying at Pioneer Village. It is a wonderful place to vacation. Ronnie checked in with us to see if we needed anything — super helpful and nice."</p>
+              <div class="review-author">Brooke H.</div>
+              <div class="review-source">VRBO Review</div>
             </div>
 
             <div class="review-card">
@@ -498,7 +532,7 @@
           </li>
           <li>
             <span>💬</span>
-            <span>Cabin questions? Reach out through the <a href="our-cabins.html">Vrbo or Airbnb listing</a> for that cabin — the host responds there.</span>
+            <span>Cabin questions? Reach out through the <a href="our-cabins.html#cabin-grid">Vrbo or Airbnb listing</a> for that cabin — we'll get back to you there!</span>
           </li>
           <li>
             <span>❓</span>
@@ -687,6 +721,66 @@
       buildDots();
       goTo(0);
       startAuto();
+    })();
+  </script>
+
+  <script>
+    // ---- Gallery Carousel ----
+    (function () {
+      var gc       = document.getElementById('gallery-carousel');
+      var track    = gc.querySelector('.gallery-carousel-track');
+      var slides   = Array.from(track.querySelectorAll('.gallery-carousel-slide'));
+      var prevBtn  = gc.querySelector('.carousel-prev');
+      var nextBtn  = gc.querySelector('.carousel-next');
+      var dotsWrap = document.getElementById('gallery-dots');
+      var TOTAL    = slides.length;
+      var GAP      = 12;
+      var current  = 0;
+
+      function visible() { return window.innerWidth <= 768 ? 1 : 3; }
+      function maxIdx()  { return TOTAL - visible(); }
+      function slideW()  { return slides[0].offsetWidth + GAP; }
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        for (var i = 0; i <= maxIdx(); i++) {
+          (function(idx) {
+            var btn = document.createElement('button');
+            btn.className = 'carousel-dot';
+            btn.setAttribute('aria-label', 'Slide ' + (idx + 1));
+            btn.addEventListener('click', function() { goTo(idx); });
+            dotsWrap.appendChild(btn);
+          })(i);
+        }
+      }
+
+      function syncDots() {
+        dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function goTo(i) {
+        var max = maxIdx();
+        current = ((i % (max + 1)) + (max + 1)) % (max + 1);
+        track.style.transform = 'translateX(-' + (current * slideW()) + 'px)';
+        syncDots();
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+      var resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          buildDots();
+          goTo(Math.min(current, maxIdx()));
+        }, 150);
+      });
+
+      buildDots();
+      goTo(0);
     })();
   </script>
 

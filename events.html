@@ -117,6 +117,22 @@
       transition: color 0.2s;
     }
     .event-card-full a.learn-more:hover { color: var(--sage); }
+    .event-card-full {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .event-card-full:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+    }
+    .events-full-grid--centered {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .events-full-grid--centered .event-card-full {
+      flex: 0 0 calc(33.33% - 16px);
+      max-width: calc(33.33% - 16px);
+    }
 
     /* dark-bg card variant for Winter section */
     .events-page-section.bg-forest .event-card-full {
@@ -191,7 +207,7 @@
       <li><a href="whats-local.html">What's Local</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li>
-        <a href="our-cabins.html" class="nav-book-btn">Book Now</a>
+        <a href="our-cabins.html#cabin-grid" class="nav-book-btn">Book Now</a>
       </li>
     </ul>
   </nav>
@@ -209,7 +225,7 @@
 
   <!-- INTRO -->
   <div class="section-intro attractions-intro">
-    <p>Maggie Valley and the surrounding Smoky Mountains region host dozens of events throughout the year — from internationally known festivals to intimate local traditions. Use this guide to time your stay around what matters most to you, or just come and see what's on when you arrive.</p>
+    <p>The Smoky Mountains stay busy year-round — from internationally known festivals to quiet local traditions. Use this guide to plan your stay, or just come and see what's happening when you arrive.</p>
   </div>
 
   <!-- ============================
@@ -217,7 +233,6 @@
        ============================ -->
   <section class="events-page-section bg-white">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="season-badge"><span class="season-badge-icon">🌸</span> Spring</div>
       <h2 class="season-section-title" style="margin-bottom:40px;">Spring Events</h2>
       <div class="events-full-grid">
 
@@ -254,9 +269,8 @@
        ============================ -->
   <section class="events-page-section bg-cream">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="season-badge"><span class="season-badge-icon">☀️</span> Summer</div>
       <h2 class="season-section-title" style="margin-bottom:40px;">Summer Events</h2>
-      <div class="events-full-grid">
+      <div class="events-full-grid events-full-grid--centered">
 
         <div class="event-card-full">
           <div class="event-card-full-icon">🏍️</div>
@@ -307,7 +321,6 @@
        ============================ -->
   <section class="events-page-section bg-white">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="season-badge"><span class="season-badge-icon">🍂</span> Fall</div>
       <h2 class="season-section-title" style="margin-bottom:40px;">Fall Events</h2>
       <div class="events-full-grid">
 
@@ -344,7 +357,6 @@
        ============================ -->
   <section class="events-page-section bg-forest">
     <div style="max-width:1100px;margin:0 auto;">
-      <div class="season-badge"><span class="season-badge-icon">❄️</span> Winter</div>
       <h2 class="season-section-title" style="margin-bottom:40px;">Winter Events</h2>
       <div class="events-full-grid">
 
@@ -400,7 +412,7 @@
       <h2>Plan Your Stay Around the <em>Events You Love</em></h2>
       <p>Book a cabin at Pioneer Village and use Maggie Valley as your base. 14 cabins, one beautiful valley.</p>
       <div class="btn-group" style="justify-content:center;">
-        <a href="our-cabins.html" class="btn btn-gold">Browse Cabins</a>
+        <a href="our-cabins.html#cabin-grid" class="btn btn-gold">Browse Cabins</a>
         <a href="whats-local.html" class="btn btn-outline">What's Local</a>
       </div>
     </div>
