@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Pioneer Village NC</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .not-found-section {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 40px;
+      background: var(--warm-white);
+    }
+    .not-found-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .not-found-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 56px);
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .not-found-sub {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+    .not-found-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Pioneer Village</span>
+      <span class="nav-logo-sub">Maggie Valley, NC</span>
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-cabins.html">Our Cabins</a></li>
+      <li><a href="whats-local.html">What's Local</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li>
+        <a href="our-cabins.html#cabin-grid" class="nav-book-btn">Book Now</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="not-found-section">
+    <p class="not-found-eyebrow">404 — Page Not Found</p>
+    <h1 class="not-found-heading">This page got lost<br>in the mountains.</h1>
+    <p class="not-found-sub">The page you're looking for doesn't exist or may have moved. Head back and find your cabin.</p>
+    <div class="not-found-links">
+      <a href="index.html" class="btn btn-gold">Back to Home</a>
+      <a href="our-cabins.html#cabin-grid" class="btn btn-outline-dark">Browse Cabins</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Pioneer Village</div>
+        <div class="footer-brand-sub">Maggie Valley, NC</div>
+        <p class="footer-brand-desc">14 rustic cabins nestled along Campbell Creek in the heart of the Smoky Mountains. Open year-round. Pet friendly. Group bookings welcome.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-cabins.html">Our Cabins</a></li>
+          <li><a href="whats-local.html">What's Local</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="events.html">Area Events</a></li>
+          <li><a href="about-us.html#faq">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Book</h4>
+        <ul>
+          <li><a href="our-cabins.html#cabin-grid">Check Availability</a></li>
+          <li><a href="index.html#weekday">Weekday Deals</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pioneer Village NC — All Rights Reserved.</span>
+      <span>219 Campbell Creek Rd, Maggie Valley, NC 28751</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
